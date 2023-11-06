@@ -1,0 +1,12 @@
+# dependencies
+client/node_modules
+api/node_modules
+/.pnp
+.pnp.js
+.env
+
+# testing
+/coverage
+
+# production
+/build
