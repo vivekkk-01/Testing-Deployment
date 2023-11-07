@@ -36,6 +36,6 @@ mongoose
     console.log(err, "Error occurred...");
   });
 
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend server is running...");
 });
