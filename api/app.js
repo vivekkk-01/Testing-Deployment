@@ -4,12 +4,14 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
+const compression = require("compression");
 
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const doctorRoutes = require("./routes/doctor");
 
+app.use(compression());
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
