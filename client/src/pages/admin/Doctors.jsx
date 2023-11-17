@@ -36,7 +36,7 @@ const Doctors = () => {
                   setStatus("approved");
                   record.status = "approved";
                   const response = await fetch(
-                    "http://localhost:8000/admin/doctors-notification/" +
+                    "https://my-first-app-tsip.onrender.com/admin/doctors-notification/" +
                       record._id,
                     {
                       method: "PUT",
@@ -60,7 +60,7 @@ const Doctors = () => {
                   setStatus("rejected");
                   record.status = "rejected";
                   const response = await fetch(
-                    "http://localhost:8000/admin/doctors-notification/" +
+                    "https://my-first-app-tsip.onrender.com/admin/doctors-notification/" +
                       record._id,
                     {
                       method: "PUT",
@@ -98,7 +98,7 @@ export const loader = async () => {
   if (!userObj) {
     return redirect("/login");
   }
-  const response = await fetch("http://localhost:8000/admin/doctors", {
+  const response = await fetch("https://my-first-app-tsip.onrender.com/admin/doctors", {
     headers: {
       authorization: `Bearer ${userObj.accessToken}`,
     },

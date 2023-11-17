@@ -48,7 +48,7 @@ export const loader = async () => {
     return redirect("/login");
   }
   const response = await fetch(
-    "http://localhost:8000/user/appointments/" + currentUser.id,
+    "https://my-first-app-tsip.onrender.com/user/appointments/" + currentUser.id,
     {
       headers: {
         authorization: `Bearer ${currentUser.accessToken}`,
